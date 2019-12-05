@@ -24,3 +24,5 @@ In our Case of study the RNN is used to convert input sequences into a sequence 
 Bibliography:
 https://nordicapis.com/5-best-speech-to-text-apis/
 https://machinelearningmastery.com/recurrent-neural-network-algorithms-for-deep-learning/
+https://www.quora.com/Which-neural-network-type-is-best-for-speech-recognition-and-speech-synthesis
+
