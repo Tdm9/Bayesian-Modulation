@@ -8,10 +8,10 @@ Todays Speech Recognition Example:
 Methods of Speech Recognition:
   
   
-  Deep Speech 1
-Uses a well-optimized RNN training system
-Does not require phoneme dictionary,
-Employes multiple GPU's to process thousands of hours of data,
+  Deep Speech:
+-Uses a well-optimized RNN training system
+-Does not require phoneme dictionary,
+-Employes multiple GPU's to process thousands of hours of data,
   
 
 
