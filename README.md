@@ -25,4 +25,8 @@ Bibliography:
 https://nordicapis.com/5-best-speech-to-text-apis/
 https://machinelearningmastery.com/recurrent-neural-network-algorithms-for-deep-learning/
 https://www.quora.com/Which-neural-network-type-is-best-for-speech-recognition-and-speech-synthesis
+https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8PS
+https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7
 
+#CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks):
+In some cases like Image Recognition on which the set of input/output nodes are static basically on every time independent problem CNN is at most the optimal Neural Network option, with the introduction of time as variable RNN comes in handy.  Output for a given input is now not only based on the input at a given time, but also the inputs that came previously. 
