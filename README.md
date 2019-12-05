@@ -9,7 +9,7 @@
 Multilayer perceptron (MLP)  
 Convolutional neural network (CNN)  
 Recursive neural network (RNN)  
-Recurrent neural network (RNN) 
+Recurrent neural network (RNN)  
 Long short-term memory (LSTM)  
 Sequence-to-sequence models  
 Shallow neural networks
