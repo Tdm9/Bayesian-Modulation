@@ -29,4 +29,5 @@ https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8
 https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7
 
 #CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks):
+
 In some cases like Image Recognition on which the set of input/output nodes are static basically on every time independent problem CNN is at most the optimal Neural Network option, with the introduction of time as variable RNN comes in handy.  Output for a given input is now not only based on the input at a given time, but also the inputs that came previously. 
