@@ -28,6 +28,9 @@ By adding state to a neural network we will be able to explicitly learn and expl
 like humans who can recognize something as they move towards that same thing, machines will also be able to recognize and make predictions base on movement and temporal data.  
 In our Case of study the RNN is used to convert input sequences into a sequence of character probabilities for the transcription.
 
+# CNN (Convulutional Neural Netowrks):
+In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery. They are also known as shift invariant or space invariant artificial neural networks (SIANN), based on their shared-weights architecture and translation invariance characteristics. They have applications in image and video recognition, recommender systems,[3] image classification, medical image analysis, and natural language processing.
+
 # Bibliography:
 
 -https://nordicapis.com/5-best-speech-to-text-apis/  
