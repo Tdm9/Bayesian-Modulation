@@ -61,3 +61,4 @@ Com essa amostra são depois extrapolados detalhes acerca do input aplicando um 
 ![](convolucao.gif)
 
 
+
