@@ -38,7 +38,8 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 -https://www.quora.com/Which-neural-network-type-is-best-for-speech-recognition-and-speech-synthesis  
 -https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8PS  
 -https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7  
--https://medium.com/@datamonsters/artificial-neural-networks-for-natural-language-processing-part-1-64ca9ebfa3b2  
+-https://medium.com/@datamonsters/artificial-neural-networks-for-natural-language-processing-part-1-64ca9ebfa3b2   
+-https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d  
 
 # CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks)
 
@@ -55,10 +56,17 @@ Na nossa abordagem ao reconhecimento de voz, iremos dissecar a utilidade desta r
 # Convolução
 
 Uma convolução é a primeira camada de acesso a dados, que extrai com base num input uma amostra.
-Com essa amostra são depois extrapolados detalhes acerca do input aplicando um filtro.
+Com essa amostra são depois extrapolados detalhes acerca do input aplicando um filtro/kernel.
+Um kernel é uma matrix menor que a matrix de input, também denominada de matrix de convolução, cuja função é iterar a matriz de input
+aplicando-lhe um produto.
 
 
 ![](convolucao.gif)
 
+Quando o objetivo é extrair do output multiplas propriedades usamos vários kernels do mesmo tamanho, de modo a que o resultado destes filtros seja empilhavel.
+
+![Processo de convolução com mais de um kernel](https://miro.medium.com/max/979/1*DmAwcMCcHqZdF62J0hNWlQ.png)
+
+Numa última fase da convolução é aplicada á matrix filtrada uma função de activação (normalmente sendo esta uma função de ReLu ou de Tanh) com o intuito de deslinearizar o output. ![Processo completo de convolução](https://miro.medium.com/max/1146/1*u2el-HrqRPVk7x0xlvs_CA.png)
 
 
