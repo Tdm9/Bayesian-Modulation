@@ -43,3 +43,10 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 # CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks)
 
 In some cases like Image Recognition on which the set of input/output nodes are static basically on every time independent problem CNN is at most the optimal Neural Network option, with the introduction of time as variable RNN comes in handy.  Output for a given input is now not only based on the input at a given time, but also the inputs that came previously. 
+
+
+
+# Redes de convolução: Introdução
+
+Na área de redes neuronais redes de convolução é uma das principais categorias para análise e classificação de imagens, como tal o uso deste tipo de rede torna-se bastante reincidente quando o objetivo é detetar objetos, reconhecer individuos ou até ler textos manuscritos.
+Na nossa abordagem ao reconhecimento de voz, iremos dissecar a utilidade desta rede quando o assunto de estudo se trata não de uma simples imagem de duas dimensões (alturaxlargura), mas sim de reconhecer uma voz, algo dependente de uma quantidade descomunal de variaveis.
