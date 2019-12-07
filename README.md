@@ -48,5 +48,16 @@ In some cases like Image Recognition on which the set of input/output nodes are 
 
 # Redes de convolução: Introdução
 
-Na área de redes neuronais redes de convolução é uma das principais categorias para análise e classificação de imagens, como tal o uso deste tipo de rede torna-se bastante reincidente quando o objetivo é detetar objetos, reconhecer individuos ou até ler textos manuscritos.
+Na área de redes neuronais, CNN (redes de convolução) são uma das principais categorias para análise e classificação de imagens, como tal o uso deste tipo de rede torna-se bastante reincidente quando o objetivo é detetar objetos, reconhecer individuos ou até ler textos manuscritos.
 Na nossa abordagem ao reconhecimento de voz, iremos dissecar a utilidade desta rede quando o assunto de estudo se trata não de uma simples imagem de duas dimensões (alturaxlargura), mas sim de reconhecer uma voz, algo dependente de uma quantidade descomunal de variaveis.
+
+
+# Convolução
+
+Uma convolução é a primeira camada de acesso a dados, que extrai com base num input uma amostra.
+Com essa amostra são depois extrapolados detalhes acerca do input aplicando um filtro.
+
+
+![](convolucao.gif)
+
+
