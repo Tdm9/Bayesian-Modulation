@@ -20,7 +20,20 @@ Shallow neural networks
 -Does not require phoneme dictionary,  
 -Employes multiple GPU's to process thousands of hours of data,  
   
+# Redes Feedforward: Introdução
+Nas redes  Feedforward as camadas de rede são independentes umas das outras, assim, uma camada pode ter um número arbitrário de nós (sendo que, tipicamente, o número de nós arbitrários tem de ser superior ao de nós de input). Quando aplicadas a funções de aproximação, geralmente existe um input e um output. Por contraste, quando usadas como classificadores, o número de nós de input e output irá corresponder o número de características de input e o número de classes de output, respetivamente. Adicionalmente, terá de ter no mínimo uma camada oculta e todos os nós das camadas têm peso 1.
 
+# Funcionamento das Redes Feedforward
+O principal objetivo das redes Feedforward é fazer uma aproximação de uma dada função f. 
+Por exemplo, a função y = f(x) atribui a um dado valor de x um valor de y. Uma rede Feedforward define o mapeamento através de uma função y = f(x, θ), aprendendo os valores do parâmetro θ que resultam na melhor função de aproximação.
+Estas redes são representadas por uma série de diferentes funções. Cada rede é também acompanhada por um grafo acíclico dirigido: 
+
+![Representação de uma rede Feedforward através de um grafo acíclico dirigido](https://www.learnopencv.com/wp-content/uploads/2017/10/mlp-diagram.jpg)
+
+Por exemplo, podemos ter três funções, f(1), f(2) e f(3) interligadas formando então f (x) = f(3)(f (2)(f (1)(x))). Neste caso, f(1) é primeira camada de input, f(2) a segunda e f(3) a camada de output.
+As camadas entre as camadas de input e output são conhecidas como “camadas ocultas”, sendo que o traning data não expressa o output desejado a estas camadas. A rede pode conter infinitas camadas de camadas ocultas com um qualquer número de unidades. Uma unidade representa um neurónio que obtém o input de unidades de camadas prévias e calcula o seu valor de ativação.
+# Porque precisamos de redes Feedforward?
+A utilidade no uso das redes Feedforward surge nos modelos lineares estarem limitados a utilizar apenas funções lineares, algo que não acontece com redes neuronais. Quando uma determinada amostra está impossibilitada de ser separada linearmente, os modelos lineares apresentam alguma dificuldade a fazer aproximações, contrastando com a facilidade apresentada nos modelos neuronais. As camadas ocultas são, portanto, usadas para aumentar a “não linearidade” e alterar a representação de uma data amostra para uma melhor generalização de uma função
 
 # RNN(Recurrent neural networks):
 Add additional weights to the network to create cycles in the network graph in an effort to maintain an internal state
@@ -39,7 +52,9 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 -https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8PS  
 -https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7  
 -https://medium.com/@datamonsters/artificial-neural-networks-for-natural-language-processing-part-1-64ca9ebfa3b2   
--https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d  
+-https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d
+-https://towardsdatascience.com/feed-forward-neural-networks-c503faa46620
+-https://dzone.com/articles/the-very-basic-introduction-to-feed-forward-neural
 
 # CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks)
 
