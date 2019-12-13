@@ -85,3 +85,8 @@ Quando o objetivo é extrair do output multiplas propriedades usamos vários ker
 Numa última fase da convolução é aplicada á matrix filtrada uma função de activação (normalmente sendo esta uma função de ReLu ou de Tanh) com o intuito de deslinearizar o output. ![Processo completo de convolução](https://miro.medium.com/max/1146/1*u2el-HrqRPVk7x0xlvs_CA.png)
 
 
+# Redes de convulução versus Feed Forward
+
+No estudo de reconhecimento de voz e principalmente no estudo de reconecimento de imagem podemos chegar à conclusão que as redes de convulução são muito mais poderosas na classificação de dados do que uma rede feed forward, isto acontece com base nas extrações de amostras de um determinado input, ou seja, quando temos um elevado número de inputs as redes de convulução tendem a ser muito eficientes pois reduzem este número de inputs em grande escala.
+Especificamente em reconhecimento de voz frequentemente classificamos os dados em espectogramas, fazendo isto os nossos dados ficam a parecer-se bastante como imagens que podemos classificar para descobrirmos os seus padrões, o que nos leva a concluir que redes de convulução são uma melhor escolha devido ao número de inputs.
+
