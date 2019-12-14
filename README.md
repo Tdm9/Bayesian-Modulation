@@ -13,13 +13,7 @@ Recurrent neural network (RNN)
 Long short-term memory (LSTM)  
 Sequence-to-sequence models  
 Shallow neural networks
-  
-  
-#  Deep Speech:  
--Uses a well-optimized RNN training system  
--Does not require phoneme dictionary,  
--Employes multiple GPU's to process thousands of hours of data,  
-  
+    
 # Redes Feedforward: Introdução
 Nas redes  Feedforward as camadas de rede são independentes umas das outras, assim, uma camada pode ter um número arbitrário de nós (sendo que, tipicamente, o número de nós arbitrários tem de ser superior ao de nós de input). Quando aplicadas a funções de aproximação, geralmente existe um input e um output. Por contraste, quando usadas como classificadores, o número de nós de input e output irá corresponder o número de características de input e o número de classes de output, respetivamente. Adicionalmente, terá de ter no mínimo uma camada oculta e todos os nós das camadas têm peso 1.
 
@@ -56,12 +50,6 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 -https://towardsdatascience.com/feed-forward-neural-networks-c503faa46620
 -https://dzone.com/articles/the-very-basic-introduction-to-feed-forward-neural
 
-# CNN (Convolutional Neural Networks) VS RNN(Recurrent neural networks)
-
-In some cases like Image Recognition on which the set of input/output nodes are static basically on every time independent problem CNN is at most the optimal Neural Network option, with the introduction of time as variable RNN comes in handy.  Output for a given input is now not only based on the input at a given time, but also the inputs that came previously. 
-
-
-
 # Redes de convolução: Introdução
 
 Na área de redes neuronais, CNN (redes de convolução) são uma das principais categorias para análise e classificação de imagens, como tal o uso deste tipo de rede torna-se bastante reincidente quando o objetivo é detetar objetos, reconhecer individuos ou até ler textos manuscritos.
@@ -89,4 +77,12 @@ Numa última fase da convolução é aplicada á matrix filtrada uma função de
 
 No estudo de reconhecimento de voz e principalmente no estudo de reconecimento de imagem podemos chegar à conclusão que as redes de convulução são muito mais poderosas na classificação de dados do que uma rede feed forward, isto acontece com base nas extrações de amostras de um determinado input, ou seja, quando temos um elevado número de inputs as redes de convulução tendem a ser muito eficientes pois reduzem este número de inputs em grande escala.
 Especificamente em reconhecimento de voz frequentemente classificamos os dados em espectogramas, fazendo isto os nossos dados ficam a parecer-se bastante como imagens que podemos classificar para descobrirmos os seus padrões, o que nos leva a concluir que redes de convulução são uma melhor escolha devido ao número de inputs.
+
+# Reconhecimento de Imagem vs Reconhecimento de Voz
+Por convenção tem-se vindo a estabelecer uma regra geral no que toca a redes neuronais, RNN's são óptimas para tarefas de dados sequenciais tais como reconhecimento de voz, enquanto que CNN's estão maioritariamente redirecionadas para o uso em tarefas ligadas a video e som, no entanto recentes abordagens a modelos de informação sequencial feitas pelo Facebook tem vindo a mostrar excelentes resultados apenas com CNN's.   
+> ### RNN's, excelentes ou decadentes?
+Nas redes neuronais de recorrência cada fragmento de informação está dependente do fragmento anterior, a este tipo de modelo atribuimos o nome de Modelo de dados sequencial.
+Esta limitação, do ponto de vista de um programador é um grande transtorno visto que impede a exploração de multiplicidade do processador, ou seja, impede o uso de threads o que tem um enorme impacto em termos de performance, visto que o "trabalho" que antes poderiamos dividir e realizar em paralelo, tem agora obrigatoriamente de ser executado linearmente e sequencialmente.
+No caso do Facebook (empresa multimilionária) esta limitação torna-se extremamente conflituosa, imaginando que o supercomputador da unidade de processamento do Facebook tem pelo menos 1000 threads (valor extremamente baixo para os padrões da atualidade) isto representaria que o processamento de 1000 amostras de dados (estimando que cada amostra demora 1 minuto a ser resolvida) demoraria 1 minuto num modelo com multithreading e 1000 minutos num modelo usando RNN's sem multithreading.  
+https://github.com/silversparro/wav2letter.pytorch
 
