@@ -49,6 +49,9 @@ In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of
 -https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d
 -https://towardsdatascience.com/feed-forward-neural-networks-c503faa46620
 -https://dzone.com/articles/the-very-basic-introduction-to-feed-forward-neural
+-https://towardsdatascience.com/how-does-back-propagation-in-artificial-neural-networks-work-c7cad873ea7
+-https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e
+-https://en.wikipedia.org/wiki/Backpropagation
 
 # Redes de convolução: Introdução
 
@@ -77,6 +80,20 @@ Numa última fase da convolução é aplicada á matrix filtrada uma função de
 
 No estudo de reconhecimento de voz e principalmente no estudo de reconecimento de imagem podemos chegar à conclusão que as redes de convulução são muito mais poderosas na classificação de dados do que uma rede feed forward, isto acontece com base nas extrações de amostras de um determinado input, ou seja, quando temos um elevado número de inputs as redes de convulução tendem a ser muito eficientes pois reduzem este número de inputs em grande escala.
 Especificamente em reconhecimento de voz frequentemente classificamos os dados em espectogramas, fazendo isto os nossos dados ficam a parecer-se bastante como imagens que podemos classificar para descobrirmos os seus padrões, o que nos leva a concluir que redes de convulução são uma melhor escolha devido ao número de inputs.
+
+# Back-propagation
+Back-propagation (conhecido como backprop) é um algoritmo vastamente utilizado no treino de redes Feedforward na área de Machine Learning. Existem também generalizações para redes ANN (Artificial Neural Networks).  
+
+A técnica de backprop calcula eficazmente o gradiente da função de erro com os respetivos pesos da rede para cada par de input e output. Desta forma, torna-se possível utilizar o gradiente para o treino de redes de várias camadas, alterando os pesos para minimizar a erro. 
+Normalmente, são usadas a descida do gradiente ou o SGD (Stochastic Gradient Descent).  A técnica em questão acaba por ser a essência do treino de redes neuronais. 
+
+# Back-propagation: Funcionamento
+O algoritmo de Back-propagation calcula a descida do gradiente da função de erro com o
+respetivo peso através da regra da cadeia, iterando para trás, camada a camada, da última cadeia, evitando cálculos redundantes.
+Através da função de erro da iteração anterior, os pesos da rede neuronal são ajustados. O ajuste dos pesos visa a garantir a menor margem de erro possível tornando assim o modelo o mais estável possível.
+
+![Funcionamento de Forward-Propagation e de Back-Propagation](https://miro.medium.com/max/585/1*0hf4gLbc-2V5RMXBhluJ_A.gif)
+
 
 # Reconhecimento de Imagem vs Reconhecimento de Voz
 Por convenção tem-se vindo a estabelecer uma regra geral no que toca a redes neuronais, RNN's são óptimas para tarefas de dados sequenciais tais como reconhecimento de voz, enquanto que CNN's estão maioritariamente redirecionadas para o uso em tarefas ligadas a video e som, no entanto recentes abordagens a modelos de informação sequencial feitas pelo Facebook tem vindo a mostrar excelentes resultados apenas com CNN's.   
