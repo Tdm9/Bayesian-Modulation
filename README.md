@@ -1,11 +1,10 @@
-# Todays Speech Recognition Example:  
+# Exemplos de reconhecimento de voz:  
 -Cortana: Windows assistant  
 -Siri:    Apple's assistant and apple homepod assistant  
 -Google Assistant: Android assistant and Google Home assistant  
 -Alexa    Amazon home assistant  
 
-
-# Common Neural Networks:  
+# Exemplos de Redes Neuronais:  
 Multilayer perceptron (MLP)  
 Convolutional neural network (CNN)  
 Recursive neural network (RNN)  
@@ -26,6 +25,7 @@ Estas redes são representadas por uma série de diferentes funções. Cada rede
 
 Por exemplo, podemos ter três funções, f(1), f(2) e f(3) interligadas formando então f (x) = f(3)(f (2)(f (1)(x))). Neste caso, f(1) é primeira camada de input, f(2) a segunda e f(3) a camada de output.
 As camadas entre as camadas de input e output são conhecidas como “camadas ocultas”, sendo que o traning data não expressa o output desejado a estas camadas. A rede pode conter infinitas camadas de camadas ocultas com um qualquer número de unidades. Uma unidade representa um neurónio que obtém o input de unidades de camadas prévias e calcula o seu valor de ativação.
+
 # Porque precisamos de redes Feedforward?
 A utilidade no uso das redes Feedforward surge nos modelos lineares estarem limitados a utilizar apenas funções lineares, algo que não acontece com redes neuronais. Quando uma determinada amostra está impossibilitada de ser separada linearmente, os modelos lineares apresentam alguma dificuldade a fazer aproximações, contrastando com a facilidade apresentada nos modelos neuronais. As camadas ocultas são, portanto, usadas para aumentar a “não linearidade” e alterar a representação de uma data amostra para uma melhor generalização de uma função
 
@@ -37,21 +37,6 @@ In our Case of study the RNN is used to convert input sequences into a sequence 
 
 # CNN (Convulutional Neural Netowrks):
 In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery. They are also known as shift invariant or space invariant artificial neural networks (SIANN), based on their shared-weights architecture and translation invariance characteristics. They have applications in image and video recognition, recommender systems,[3] image classification, medical image analysis, and natural language processing.
-
-# Bibliography:
-
--https://nordicapis.com/5-best-speech-to-text-apis/  
--https://machinelearningmastery.com/recurrent-neural-network-algorithms-for-deep-learning/  
--https://www.quora.com/Which-neural-network-type-is-best-for-speech-recognition-and-speech-synthesis  
--https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8PS  
--https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7  
--https://medium.com/@datamonsters/artificial-neural-networks-for-natural-language-processing-part-1-64ca9ebfa3b2   
--https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d
--https://towardsdatascience.com/feed-forward-neural-networks-c503faa46620
--https://dzone.com/articles/the-very-basic-introduction-to-feed-forward-neural
--https://towardsdatascience.com/how-does-back-propagation-in-artificial-neural-networks-work-c7cad873ea7
--https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e
--https://en.wikipedia.org/wiki/Backpropagation
 
 # Redes de convolução: Introdução
 
@@ -102,4 +87,19 @@ Nas redes neuronais de recorrência cada fragmento de informação está depende
 Esta limitação, do ponto de vista de um programador é um grande transtorno visto que impede a exploração de multiplicidade do processador, ou seja, impede o uso de threads o que tem um enorme impacto em termos de performance, visto que o "trabalho" que antes poderiamos dividir e realizar em paralelo, tem agora obrigatoriamente de ser executado linearmente e sequencialmente.
 No caso do Facebook (empresa multimilionária) esta limitação torna-se extremamente conflituosa, imaginando que o supercomputador da unidade de processamento do Facebook tem pelo menos 1000 threads (valor extremamente baixo para os padrões da atualidade) isto representaria que o processamento de 1000 amostras de dados (estimando que cada amostra demora 1 minuto a ser resolvida) demoraria 1 minuto num modelo com multithreading e 1000 minutos num modelo usando RNN's sem multithreading.  
 https://github.com/silversparro/wav2letter.pytorch
+
+# Bibliography:
+
+-https://nordicapis.com/5-best-speech-to-text-apis/  
+-https://machinelearningmastery.com/recurrent-neural-network-algorithms-for-deep-learning/  
+-https://www.quora.com/Which-neural-network-type-is-best-for-speech-recognition-and-speech-synthesis  
+-https://www.coursera.org/lecture/nlp-sequence-models/different-types-of-rnns-BO8PS  
+-https://medium.com/towards-artificial-intelligence/introduction-to-the-architecture-of-recurrent-neural-networks-rnns-a277007984b7  
+-https://medium.com/@datamonsters/artificial-neural-networks-for-natural-language-processing-part-1-64ca9ebfa3b2   
+-https://towardsdatascience.com/beginners-guide-to-understanding-convolutional-neural-networks-ae9ed58bb17d
+-https://towardsdatascience.com/feed-forward-neural-networks-c503faa46620
+-https://dzone.com/articles/the-very-basic-introduction-to-feed-forward-neural
+-https://towardsdatascience.com/how-does-back-propagation-in-artificial-neural-networks-work-c7cad873ea7
+-https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e
+-https://en.wikipedia.org/wiki/Backpropagation
 
