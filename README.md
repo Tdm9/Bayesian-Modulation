@@ -60,6 +60,8 @@ Quando o objetivo é extrair do output multiplas propriedades usamos vários ker
 
 Numa última fase da convolução é aplicada á matrix filtrada uma função de activação (normalmente sendo esta uma função de ReLu ou de Tanh) com o intuito de deslinearizar o output. ![Processo completo de convolução](https://miro.medium.com/max/1146/1*u2el-HrqRPVk7x0xlvs_CA.png)
 
+Utilizando algoritmos estas redes podem reconhecer padrões e correlações em dados de grande volume.
+
 
 # Redes de convulução versus Feed Forward
 
