@@ -43,17 +43,59 @@ y_test_hot = to_categorical(y_test)
 X_train = X_train.reshape(X_train.shape[0], config.buckets, config.max_len)
 X_test = X_test.reshape(X_test.shape[0], config.buckets, config.max_len)
 
+# Simple Perceptron
+print("Perceptron")
 model = Sequential()
 model.add(Flatten(input_shape=(config.buckets, config.max_len)))
 model.add(Dense(num_classes, activation='softmax'))
 model.compile(loss="categorical_crossentropy",
                   optimizer="adam",
                   metrics=['accuracy'])
-                  wandb.init()
+wandb.init()
+model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+
+# 2D Convolution
+print("2D Convulutions")
+model = Sequential()
+model.add(Conv2D(32,
+        (3, 3),
+        input_shape=(config.buckets, config.max_len, channels),
+        activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(num_classes, activation='softmax'))
+model.compile(loss="categorical_crossentropy",
+                  optimizer="adam",
+                  metrics=['accuracy'])
+wandb.init()
+model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+
+print("Now with 2 Convolutions and dropout because of overfitting")
+model = Sequential()
+model.add(Conv2D(32,
+        (3, 3),
+        input_shape=(config.buckets, config.max_len, channels),
+        activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(32,
+        (3, 3),
+        activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.25))
+model.add(Dense(num_classes, activation='softmax'))
+model.compile(loss="categorical_crossentropy",
+                  optimizer="adam",
+                  metrics=['accuracy'])
+wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
 
 
-# build model
+# LSTM RNN
+print("LSTM")
 model = Sequential()
 model.add(LSTM(16, input_shape=(config.buckets, config.max_len, channels), activation="sigmoid"))
 model.add(Dense(1, activation='sigmoid'))
@@ -64,11 +106,11 @@ model.compile(loss="categorical_crossentropy",
                   optimizer="adam",
                   metrics=['accuracy'])
 
-
-                  wandb.init()
+wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
 
 #build feed forward model
+print("Feed Forward")
 inputs = KL.Input(shape=(config.buckets, config.max_len))
 l = KL.Flatten()(inputs)
 l = KL.Dense(512, activation=tf.nn.relu)(l)

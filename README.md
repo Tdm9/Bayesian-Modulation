@@ -104,4 +104,4 @@ https://github.com/silversparro/wav2letter.pytorch
 -https://towardsdatascience.com/how-does-back-propagation-in-artificial-neural-networks-work-c7cad873ea7
 -https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e
 -https://en.wikipedia.org/wiki/Backpropagation
-
+https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53
