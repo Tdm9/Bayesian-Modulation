@@ -51,8 +51,8 @@ Com essa amostra são depois extrapolados detalhes acerca do input aplicando um 
 Um kernel é uma matrix menor que a matrix de input, também denominada de matrix de convolução, cuja função é iterar a matriz de input
 aplicando-lhe um produto.
 
-https://miro.medium.com/max/526/1*ZCjPUFrB6eHPRi4eyP6aaA.gif
-![](convolucao.gif)
+
+![https://miro.medium.com/max/526/1*ZCjPUFrB6eHPRi4eyP6aaA.gif](https://miro.medium.com/max/526/1*ZCjPUFrB6eHPRi4eyP6aaA.gif)
 
 Quando o objetivo é extrair do output multiplas propriedades usamos vários kernels do mesmo tamanho, de modo a que o resultado destes filtros seja empilhavel.
 
