@@ -52,7 +52,7 @@ Um kernel é uma matrix menor que a matrix de input, também denominada de matri
 aplicando-lhe um produto.
 
 
-![](convolucao.gif)
+![https://miro.medium.com/max/526/1*ZCjPUFrB6eHPRi4eyP6aaA.gif](https://miro.medium.com/max/526/1*ZCjPUFrB6eHPRi4eyP6aaA.gif)
 
 Quando o objetivo é extrair do output multiplas propriedades usamos vários kernels do mesmo tamanho, de modo a que o resultado destes filtros seja empilhavel.
 
@@ -104,5 +104,4 @@ https://github.com/silversparro/wav2letter.pytorch
 -https://towardsdatascience.com/how-does-back-propagation-in-artificial-neural-networks-work-c7cad873ea7
 -https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e
 -https://en.wikipedia.org/wiki/Backpropagation
--https://github.com/lukas/ml-class/tree/master/videos/cnn-audio
 -https://towardsdatascience.com/what-the-hell-is-perceptron-626217814f53
