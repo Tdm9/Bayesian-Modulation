@@ -1,0 +1,21 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.19
+    framework: keras
+    is_jupyter_run: false
+    python_version: 3.7.3
+batch_size:
+  desc: null
+  value: 100
+buckets:
+  desc: null
+  value: 20
+epochs:
+  desc: null
+  value: 50
+max_len:
+  desc: null
+  value: 11

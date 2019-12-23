@@ -1,0 +1,23 @@
+{
+    "root": "/Users/diogo/Desktop/isel/mb/mb_repo/Bayesian-Modulation",
+    "program": "/Users/diogo/Desktop/isel/mb/mb_repo/Bayesian-Modulation/src/nns/speech_recog_nn.py",
+    "git": {
+        "remote": "https://github.com/Tdm9/Bayesian-Modulation.git",
+        "commit": "8b0dac218da8a38c843dd071b8a89f09b7ddde92"
+    },
+    "email": "diogo_leandrao@hotmail.com",
+    "startedAt": "2019-12-19T15:40:31.568868",
+    "host": "MacBook-Pro-de-Diogo.local",
+    "username": "diogo",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
+    "os": "Darwin-19.0.0-x86_64-i386-64bit",
+    "python": "3.7.3",
+    "cpu_count": 16,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "Bayesian-Modulation-src_nns",
+    "heartbeatAt": "2019-12-19T15:40:49.308714",
+    "exitcode": 1
+}
