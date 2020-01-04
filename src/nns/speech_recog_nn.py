@@ -39,7 +39,7 @@ print(y_train[100])
 y_train_hot = to_categorical(y_train)
 y_test_hot = to_categorical(y_test)
 
-'''
+
 # Simple Perceptron
 print("Perceptron")
 X_train = X_train.reshape(X_train.shape[0], config.buckets, config.max_len)
@@ -52,9 +52,9 @@ model.compile(loss="categorical_crossentropy",
                   metrics=['accuracy'])
 wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
-'''
 
-'''
+
+
 # 2D Convolution
 print("2D Convulutions")
 model = Sequential()
@@ -72,9 +72,9 @@ model.compile(loss="categorical_crossentropy",
 wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
 
-'''
 
-'''
+
+
 print("Now with 2 Convolutions and dropout because of overfitting")
 model = Sequential()
 model.add(Conv2D(32,
@@ -97,35 +97,16 @@ model.compile(loss="categorical_crossentropy",
 wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
 
-'''
-# LSTM RNN
-print("LSTM")
+# feed forward 
+print("Feed Forward")
+X_train = X_train.reshape(X_train.shape[0], config.buckets, config.max_len)
+X_test = X_test.reshape(X_test.shape[0], config.buckets, config.max_len)
 model = Sequential()
-model.add(LSTM(16, input_shape=(config.buckets, config.max_len, channels), activation="sigmoid"))
-model.add(Dense(1, activation='sigmoid'))
+model.add(Flatten(input_shape=(config.buckets, config.max_len)))
 model.add(Dense(num_classes, activation='softmax'))
-
-
+model.add(Dense(num_classes, activation='softmax'))
 model.compile(loss="categorical_crossentropy",
                   optimizer="adam",
                   metrics=['accuracy'])
-
 wandb.init()
 model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
-
-# feed forward 
-'''
-print("Feed Forward")
-inputs = KL.Input(shape=(config.buckets, config.max_len))
-l = KL.Flatten()(inputs)
-l = KL.Dense(512, activation=tf.nn.relu)(l)
-outputs = KL.Dense(10, activation=tf.nn.softmax)(l)
-
-model = tf.keras.models.Model(inputs, outputs)
-model.summary()
-model.compile(optimizer="adam",
-                loss="sparse_categorical_crossentropy",
-                metrics=["accuracy"])
-wandb.init()
-model.fit(X_train, y_train, epochs=5)
-'''

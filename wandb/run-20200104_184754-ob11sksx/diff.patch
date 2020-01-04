@@ -1,0 +1,40 @@
+diff --git a/src/nns/speech_recog_nn.py b/src/nns/speech_recog_nn.py
+index 858c706..2614be9 100644
+--- a/src/nns/speech_recog_nn.py
++++ b/src/nns/speech_recog_nn.py
+@@ -54,7 +54,7 @@ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ '''
+ 
+-'''
++
+ # 2D Convolution
+ print("2D Convulutions")
+ model = Sequential()
+@@ -72,7 +72,7 @@ model.compile(loss="categorical_crossentropy",
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ 
+-'''
++
+ 
+ '''
+ print("Now with 2 Convolutions and dropout because of overfitting")
+@@ -97,7 +97,7 @@ model.compile(loss="categorical_crossentropy",
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ 
+-'''
++
+ # LSTM RNN
+ print("LSTM")
+ model = Sequential()
+@@ -114,7 +114,7 @@ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ 
+ # feed forward 
+-'''
++
+ print("Feed Forward")
+ inputs = KL.Input(shape=(config.buckets, config.max_len))
+ l = KL.Flatten()(inputs)

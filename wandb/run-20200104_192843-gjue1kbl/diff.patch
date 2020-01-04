@@ -1,0 +1,65 @@
+diff --git a/src/nns/speech_recog_nn.py b/src/nns/speech_recog_nn.py
+index 858c706..ed78921 100644
+--- a/src/nns/speech_recog_nn.py
++++ b/src/nns/speech_recog_nn.py
+@@ -52,9 +52,9 @@ model.compile(loss="categorical_crossentropy",
+                   metrics=['accuracy'])
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+-'''
+ 
+-'''
++
++
+ # 2D Convolution
+ print("2D Convulutions")
+ model = Sequential()
+@@ -72,9 +72,9 @@ model.compile(loss="categorical_crossentropy",
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ 
+-'''
+ 
+-'''
++
++
+ print("Now with 2 Convolutions and dropout because of overfitting")
+ model = Sequential()
+ model.add(Conv2D(32,
+@@ -97,7 +97,7 @@ model.compile(loss="categorical_crossentropy",
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
+ 
+-'''
++
+ # LSTM RNN
+ print("LSTM")
+ model = Sequential()
+@@ -112,20 +112,21 @@ model.compile(loss="categorical_crossentropy",
+ 
+ wandb.init()
+ model.fit(X_train, y_train_hot, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
++'''
+ 
+ # feed forward 
+-'''
+ print("Feed Forward")
++X_train = X_train.reshape(X_train.shape[0], config.buckets, config.max_len)
++X_test = X_test.reshape(X_test.shape[0], config.buckets, config.max_len)
+ inputs = KL.Input(shape=(config.buckets, config.max_len))
+ l = KL.Flatten()(inputs)
+ l = KL.Dense(512, activation=tf.nn.relu)(l)
+ outputs = KL.Dense(10, activation=tf.nn.softmax)(l)
+ 
+ model = tf.keras.models.Model(inputs, outputs)
+-model.summary()
+ model.compile(optimizer="adam",
+                 loss="sparse_categorical_crossentropy",
+                 metrics=["accuracy"])
+-wandb.init()
+-model.fit(X_train, y_train, epochs=5)
+-'''
+\ No newline at end of file
++
++wand.init()
++model.fit(X_train, y_train, epochs=config.epochs, validation_data=(X_test, y_test_hot), callbacks=[WandbCallback(data_type="image", labels=labels)])
