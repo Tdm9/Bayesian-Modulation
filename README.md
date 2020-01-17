@@ -82,14 +82,6 @@ Através da função de erro da iteração anterior, os pesos da rede neuronal s
 ![Funcionamento de Forward-Propagation e de Back-Propagation](https://miro.medium.com/max/585/1*0hf4gLbc-2V5RMXBhluJ_A.gif)
 
 
-# Reconhecimento de Imagem vs Reconhecimento de Voz
-Por convenção tem-se vindo a estabelecer uma regra geral no que toca a redes neuronais, RNN's são óptimas para tarefas de dados sequenciais tais como reconhecimento de voz, enquanto que CNN's estão maioritariamente redirecionadas para o uso em tarefas ligadas a video e som, no entanto recentes abordagens a modelos de informação sequencial feitas pelo Facebook tem vindo a mostrar excelentes resultados apenas com CNN's.   
-> ### RNN's, excelentes ou decadentes?
-Nas redes neuronais de recorrência cada fragmento de informação está dependente do fragmento anterior, a este tipo de modelo atribuimos o nome de Modelo de dados sequencial.
-Esta limitação, do ponto de vista de um programador é um grande transtorno visto que impede a exploração de multiplicidade do processador, ou seja, impede o uso de threads o que tem um enorme impacto em termos de performance, visto que o "trabalho" que antes poderiamos dividir e realizar em paralelo, tem agora obrigatoriamente de ser executado linearmente e sequencialmente.
-No caso do Facebook (empresa multimilionária) esta limitação torna-se extremamente conflituosa, imaginando que o supercomputador da unidade de processamento do Facebook tem pelo menos 1000 threads (valor extremamente baixo para os padrões da atualidade) isto representaria que o processamento de 1000 amostras de dados (estimando que cada amostra demora 1 minuto a ser resolvida) demoraria 1 minuto num modelo com multithreading e 1000 minutos num modelo usando RNN's sem multithreading.  
-https://github.com/silversparro/wav2letter.pytorch
-
 # Bibliography:
 
 -https://nordicapis.com/5-best-speech-to-text-apis/  
