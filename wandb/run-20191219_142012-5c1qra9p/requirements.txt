@@ -29,7 +29,7 @@ llvmlite==0.30.0
 markdown==3.1.1
 matplotlib==3.1.1
 numba==0.46.0
-numpy==1.16.4
+numpy>=1.22.0
 nvidia-ml-py3==7.352.0
 pathtools==0.1.2
 pip==19.3.1
@@ -40,7 +40,7 @@ pycparser==2.19
 pygame==1.9.6
 pyparsing==2.4.0
 python-dateutil==2.8.0
-pyyaml==5.2
+pyyaml>=21.10.1
 requests==2.22.0
 resampy==0.2.2
 rx==1.6.1
